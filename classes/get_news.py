@@ -1,4 +1,4 @@
-from helpers.helpers import make_get_request
+from helpers.helpers import make_get_request, return_get_string
 
 class Get_News:
     def __init__(self, url):
@@ -28,3 +28,6 @@ this class get url as argument and set it to self
  
  you can find documentation and response from get request HERE https://newsapi.org/
 '''
+
+data = Get_News(return_get_string())
+print(data.get_all_news())

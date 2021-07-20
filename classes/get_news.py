@@ -1,6 +1,5 @@
-from helpers.helpers import make_get_request, return_get_string
-
-class Get_News:
+from helpers.helpers import make_get_request
+class GetNews:
     def __init__(self, url):
         self.url = url
 
@@ -23,11 +22,11 @@ this class get url as argument and set it to self
  
  return_get_string() -> return string, url
  
- data = Get_News(return_get_string())
+ data = GetNews(return_get_string())
  print(data.get_all_news())
  
  you can find documentation and response from get request HERE https://newsapi.org/
 '''
 
-data = Get_News(return_get_string())
+data = GetNews('https://newsapi.org/v2/everything?q=tesla&from=2021-06-20&sortBy=publishedAt&apiKey=8836e4490fcf4387b55ae5bac665210b')
 print(data.get_all_news())
